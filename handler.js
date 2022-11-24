@@ -1031,9 +1031,9 @@ global.dfail = (type, m, conn) => {
     let nmsr = `👋 Hai *@${m.sender.split("@")[0]}*, `
     let msg = {
         rowner: `${nmsr}\n 
-Perintah ini hanya dapat digunakan oleh *OWNER* !`,
+Perintah ini hanya dapat digunakan oleh *HumanzDev* !`,
         owner: `${nmsr}\n
-Perintah ini hanya dapat digunakan oleh *Owner Bot* !`,
+Perintah ini hanya dapat digunakan oleh *HumanzDev* !`,
         mods: `${nmsr}\n 
 Perintah ini hanya dapat digunakan oleh *Moderator* !`,
         premium: `${nmsr}\n
@@ -1056,9 +1056,9 @@ Fitur ini di *disable* !`
     if (msg) return conn.sendButton(m.chat, danied, msg, `${imgr + 'Accses Danied'}`, [['MENU', '.menu'],['OWNER', '.menu']],m)
     
      let msgg = {
-    	unreg: `${nmsr}\nSilahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *Click button di bawah*\n\n*Kalian bisa ikuti langkah verify selanjutnya*\n\nLAKI-LAKI ATAU PEREMPUAN ?`
+    	unreg: `${nmsr}\nSilahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *Click button di bawah*\n\n*Kalian bisa ikuti langkah verify selanjutnya*\n\nLANANG ATAU WEDOK ?`
 }[type]
-if (msgg) return conn.sendButton(m.chat, `${global.htki} VERIFY ${global.htka}`, msgg, `${imgr + 'Verify'}`, [['LAKI-LAKI', '/verify'],['PEREMPUAN', '/verify']],m)
+if (msgg) return conn.sendButton(m.chat, `${global.htki} VERIFY ${global.htka}`, msgg, `${imgr + 'Verify'}`, [['LANANG', '/verify'],['WEDOK', '/verify']],m)
 }    
     
 let file = global.__filename(import.meta.url, true)
